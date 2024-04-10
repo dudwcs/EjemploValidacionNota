@@ -41,20 +41,21 @@
 						<tr>
 							{% for col in fila %}
 								<td>
-									{{col}}</td>
+									<a href="{{path('app_lucky_number', {'max':col})}}">{{col}}</a>
+								</td>
 
 							{% endfor %}
 						</tr>
 					{% endfor %}
 					{# {% for i in 0..filas-1 %}
-																					<tr>
-																						{% for j in 0..cols-1 %}
-																							<td>
-															                               {{tabla[i][j]}} 
-															                                </td>
-																						{% endfor %}
-																					
-																				{% endfor %} #}
+																										<tr>
+																											{% for j in 0..cols-1 %}
+																												<td>
+																				                               {{tabla[i][j]}} 
+																				                                </td>
+																											{% endfor %}
+																										
+																									{% endfor %} #}
 				</tbody>
 			</table>
 
