@@ -48,4 +48,14 @@ class NotaController extends AbstractController
             'nota' => $nota
         ]);
     }
+    #[Route('/nota', name: 'app_nota_list')]
+    public function list(NotaService $notaServicio):Response{
+        $notas = $notaServicio->list();
+        return $this->render(
+            'nota/list.html.twig',
+            ['notas' => $notas]
+        );
+
+
+    }
 }
