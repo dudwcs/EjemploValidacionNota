@@ -58,4 +58,15 @@ class NotaController extends AbstractController
 
 
     }
+
+    #[Route('/nota/{id}', name: 'app_nota_show')]
+    public function show(Nota $nota): Response
+    {
+        $this->addFlash('warning', 'Hemos encontrado la nota');
+
+        return $this->render(
+            'nota/detail.html.twig',
+            ['nota' => $nota]
+        );
+    }
 }
