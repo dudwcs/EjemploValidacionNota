@@ -1,6 +1,8 @@
 //import './bootstrap.js';
 
 //import '.js/inicio.js';
+
+//import bootstrap from 'bootstrap';
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -11,6 +13,7 @@
 /* Os últimos estilos sobrescriben ós anteriores*/
 import './styles/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

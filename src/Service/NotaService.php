@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Entity\Nota;
 use App\Repository\NotaRepository;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 
 class NotaService
@@ -19,6 +20,9 @@ class NotaService
     }
     public function create(Nota $nota)
     {
+        if($nota->getFechaModificacion()==null){
+            $nota->setFechaModificacion(new DateTime());
+        }
         $this->entityManager->persist($nota);
         $this->entityManager->flush();
     }

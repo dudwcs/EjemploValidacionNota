@@ -6,6 +6,7 @@ use App\Repository\NotaRepository;
 use DateTime;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: NotaRepository::class)]
 class Nota
@@ -15,15 +16,16 @@ class Nota
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\NotBlank]
     #[ORM\Column(length: 50)]
     private ?string $titulo = null;
-
+    #[Assert\NotBlank]
     #[ORM\Column(length: 255)]
     private ?string $descripcion = null;
 
 
     #[ORM\Column(type: 'datetime')]
-    private DateTime $fechaModificacion;
+    private ?DateTime $fechaModificacion = null;
 
     public function getId(): ?int
     {

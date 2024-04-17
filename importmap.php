@@ -16,10 +16,6 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
-    // 'inicio' => [
-    //  'path' => './assets/js/inicio.js',
-    //  'entrypoint' => true,
-    // ],
     '@hotwired/stimulus' => [
         'version' => '3.2.2',
     ],
@@ -38,5 +34,8 @@ return [
     'bootstrap/dist/css/bootstrap.min.css' => [
         'version' => '5.3.3',
         'type' => 'css',
+    ],
+    'bootstrap/dist/js/bootstrap.min.js' => [
+        'version' => '5.3.3',
     ],
 ];
